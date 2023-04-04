@@ -24,7 +24,7 @@ def user_input_features():
     Revenue = st.sidebar.slider('revenue', 0, 3000, 1500)
     Runtime = st.sidebar.slider('runtime', 0, 400, 200)
     Vote_average = st.sidebar.slider('vote_average', 1, 10, 5)
-    Vote_count = st.sidebar.slider('vote_count', 0, 15, 7.5)
+    Vote_count = st.sidebar.slider('vote_count', 0, 15000, 7500)
     data = {'budget': Budget,
             'release_date': Release_date,
             'revenue': Revenue,
