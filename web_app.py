@@ -2,8 +2,8 @@ import streamlit as st
 import pickle
 import numpy as np
 import pandas as pd
-from plotly import graph_objects as go 
-#import plotly.graph_objects as go
+#from plotly import graph_objects as go 
+import plotly.graph_objects as go
 
 st.write("""
 # Movie Popularity Prediction
