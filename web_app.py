@@ -7,7 +7,7 @@ import plotly.graph_objects as go
 
 st.write("""
 # Movie Popularity Prediction
-## This app can predict a movie's popularity.
+## This app can predict a movie's popularity based on metadata.
 The dataset contains movie statistics of 4800 movies.
 """)
 
@@ -19,14 +19,12 @@ st.sidebar.header('User Input Parameters')
 
 # Get user inputs
 def user_input_features():
-    Budget = st.sidebar.slider('budget', 0, 40000, 20000)
-    Release_date = st.sidebar.date_input('release_date', datetime.date(2011,1,1))
-    Revenue = st.sidebar.slider('revenue', 0, 300000, 150000)
-    Runtime = st.sidebar.slider('runtime', 130, 400, 200)
+    Budget = st.sidebar.slider('budget', 90000, 360000, 180000)
+    Revenue = st.sidebar.slider('revenue', 800000, 2500000, 1250000)
+    Runtime = st.sidebar.slider('runtime', 130, 200, 165)
     Vote_average = st.sidebar.slider('vote_average', 1, 10, 5)
-    Vote_count = st.sidebar.slider('vote_count', 0, 15000, 7500)
+    Vote_count = st.sidebar.slider('vote_count', 150, 1500, 750)
     data = {'budget': Budget,
-            'release_date': Release_date,
             'revenue': Revenue,
             'runtime': Runtime,
             'vote_average': Vote_average,
@@ -43,7 +41,7 @@ st.subheader('User Input parameters')
 st.write(df)
 
 # Create Plotly plot
-columns = ['budget', 'release_date', 'revenue', 'runtime', 'vote_average', 'vote_count']
+columns = ['budget', 'revenue', 'runtime', 'vote_average', 'vote_count']
 df_movie = df.filter(items=columns)
 y = df_movie.values.tolist()[0]
 
