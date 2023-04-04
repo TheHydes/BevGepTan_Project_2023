@@ -19,12 +19,12 @@ st.sidebar.header('User Input Parameters')
 
 # Get user inputs
 def user_input_features():
-    Budget = st.sidebar.slider('budget', 37, 206, 100)
+    Budget = st.sidebar.slider('budget', 0, 380000000, 190000000)
     Release_date = st.sidebar.slider('release_date', 3, 100, 50)
-    Revenue = st.sidebar.slider('revenue', 10, 96, 50)
-    Runtime = st.sidebar.slider('runtime', -27, 0, -13)
-    Vote_average = st.sidebar.slider('vote_average', 2, 99, 50)
-    Vote_count = st.sidebar.slider('vote_count', 3, 99, 50)
+    Revenue = st.sidebar.slider('revenue', 0, 2787965087, 1387965087)
+    Runtime = st.sidebar.slider('runtime', 0, 338, 169)
+    Vote_average = st.sidebar.slider('vote_average', 1.0, 10.0, 5.0)
+    Vote_count = st.sidebar.slider('vote_count', 0, 13752, 6752)
     data = {'budget': Budget,
             'release_date': Release_date,
             'revenue': Revenue,
