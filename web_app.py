@@ -11,7 +11,7 @@ import streamlit as st
 import pickle
 import numpy as np
 import pandas as pd
-!pip install plotly
+pip install plotly
 import plotly.graph_objects as go
 
 st.write("""
