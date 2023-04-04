@@ -19,18 +19,18 @@ st.sidebar.header('User Input Parameters')
 
 # Get user inputs
 def user_input_features():
-    Budget = st.sidebar.slider('budget', 0, 400, 200) ###million
+    Budget = st.sidebar.slider('budget', 0, 400, 200)
     Release_date = st.sidebar.date_input('release_date', datetime.date(2011,1,1))
-    Revenue = st.sidebar.slider('revenue', 0, 3000, 1500) ###million
-    Runtime = st.sidebar.slider('runtime', 0, 400, 200) ###min
+    Revenue = st.sidebar.slider('revenue', 0, 3000, 1500)
+    Runtime = st.sidebar.slider('runtime', 0, 400, 200)
     Vote_average = st.sidebar.slider('vote_average', 1.0, 10.0, 5.0)
-    Vote_count = st.sidebar.slider('vote_count', 0, 15, 7.5) ###e
-    data = {'budget': Budget,
+    Vote_count = st.sidebar.slider('vote_count', 0, 15, 7.5)
+    data = {'budget': f"{Budget} million",
             'release_date': Release_date,
-            'revenue': Revenue,
-            'runtime': Runtime,
+            'revenue': f"{Revenue} million",
+            'runtime': f"{Runtime} minutes",
             'vote_average': Vote_average,
-            'vote_count': Vote_count,
+            'vote_count': f"{Vote_count} e",
             }
     features = pd.DataFrame(data, index=[0])
     return features
