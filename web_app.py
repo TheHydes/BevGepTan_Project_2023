@@ -41,18 +41,18 @@ st.subheader('User Input parameters')
 st.write(df)
 
 # Create Plotly plot
-
-
 columns = ['budget', 'revenue', 'runtime', 'vote_average', 'vote_count']
 
 # create a new DataFrame with the selected columns
 df_movie = df[columns]
 
-# multiply the desired columns by the specified values
+# Multiply columns, for a better spectacle
 df_movie['runtime'] = df_movie['runtime'] * 10000
+df_movie['budget'] = df_movie['budget'] * 10
 df_movie['vote_average'] = df_movie['vote_average'] * 100000
 df_movie['vote_count'] = df_movie['vote_count'] * 1000
-# convert the first row of the DataFrame to a list
+
+# Convert the first row of the DataFrame to a list
 y = df_movie.values.tolist()[0]
 
 fig = go.Figure(data=go.Bar(x=columns, y=y), layout_title_text='Movie Features')
