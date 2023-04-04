@@ -25,12 +25,12 @@ def user_input_features():
     Runtime = st.sidebar.slider('runtime', 0, 400, 200)
     Vote_average = st.sidebar.slider('vote_average', 1.0, 10.0, 5.0)
     Vote_count = st.sidebar.slider('vote_count', 0, 15, 7.5)
-    data = {'budget': f"{Budget} million",
+    data = {'budget': Budget,
             'release_date': Release_date,
-            'revenue': f"{Revenue} million",
-            'runtime': f"{Runtime} minutes",
+            'revenue': Revenue,
+            'runtime': Runtime,
             'vote_average': Vote_average,
-            'vote_count': f"{Vote_count} e",
+            'vote_count': Vote_count,
             }
     features = pd.DataFrame(data, index=[0])
     return features
