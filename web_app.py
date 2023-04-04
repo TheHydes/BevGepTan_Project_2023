@@ -50,8 +50,8 @@ df_movie = df[columns]
 
 # multiply the desired columns by the specified values
 df_movie['runtime'] = df_movie['runtime'] * 10000
-df_movie['vote_average'] = df_movie['vote_average'] * 1000000
-df_movie['vote_count'] = df_movie['vote_count'] * 10000
+df_movie['vote_average'] = df_movie['vote_average'] * 100000
+df_movie['vote_count'] = df_movie['vote_count'] * 1000
 # convert the first row of the DataFrame to a list
 y = df_movie.values.tolist()[0]
 
