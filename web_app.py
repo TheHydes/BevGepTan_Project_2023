@@ -48,7 +48,7 @@ df_movie = df[columns]
 
 # Multiply columns, for a better spectacle
 df_movie['runtime'] = df_movie['runtime'] * 10000
-df_movie['budget'] = df_movie['budget'] * 10
+df_movie['budget'] = df_movie['budget'] * 5
 df_movie['vote_average'] = df_movie['vote_average'] * 100000
 df_movie['vote_count'] = df_movie['vote_count'] * 1000
 
