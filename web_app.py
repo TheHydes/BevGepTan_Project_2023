@@ -25,7 +25,7 @@ def user_input_features():
     Vote_average = st.sidebar.slider('vote_average', 1, 10, 5)
     Vote_count = st.sidebar.slider('vote_count', 150, 1500, 750)
     Release_date = st.sidebar.date_input('release_date', datetime.date(2011,1,1))
-    Genre = st.sidebar.multiselect('genre',"Action")
+    Genre = st.sidebar.multiselect('Genre',['Action', 'Comedy', 'Adventure'])
     data = {'budget': Budget,
             'revenue': Revenue,
             'runtime': Runtime,
@@ -36,7 +36,6 @@ def user_input_features():
             }
     features = pd.DataFrame(data, index=[0])
     return features
-
 
 df = user_input_features()
 
