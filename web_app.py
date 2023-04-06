@@ -25,7 +25,7 @@ def user_input_features():
     Vote_average = st.sidebar.slider('vote_average', 1, 10, 5)
     Vote_count = st.sidebar.slider('vote_count', 150, 1500, 750)
     Release_date = st.sidebar.date_input('release_date', datetime.date(2011,1,1))
-    Genre = st.sidebar.selectbox('Genre',('Action' 'Adventure' 'Fantasy' 'Animation' 'Science Fiction' 'Drama'
+    Genre = st.sidebar.selectbox('Genre',("Action" 'Adventure' 'Fantasy' 'Animation' 'Science Fiction' 'Drama'
  'Thriller' 'Family' 'Comedy' 'History' 'War' 'Western' 'Romance' 'Crime'
  'Mystery' 'Horror' 'Documentary' 'Music' 'TV Movie' 'Foreign'))
     data = {'budget': Budget,
