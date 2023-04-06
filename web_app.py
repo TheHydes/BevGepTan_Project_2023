@@ -27,7 +27,7 @@ def user_input_features():
     Release_date = st.sidebar.date_input('release_date', datetime.date(2011,1,1))
     Genre = st.sidebar.selectbox('Genre',('Action' 'Adventure' 'Fantasy' 'Animation' 'Science Fiction' 'Drama'
  'Thriller' 'Family' 'Comedy' 'History' 'War' 'Western' 'Romance' 'Crime'
- 'Mystery' 'Horror' 'Documentary' 'Music' 'TV Movie' 'Foreign'),default="Action")
+ 'Mystery' 'Horror' 'Documentary' 'Music' 'TV Movie' 'Foreign'),index=1)
     data = {'budget': Budget,
             'revenue': Revenue,
             'runtime': Runtime,
