@@ -7,7 +7,7 @@ import plotly.graph_objects as go
 
 st.write("""
 # Movie Popularity Prediction
-## This app can predict a movie's popularity based on metadata.
+## This app can predict a movie's popularity based on data.
 The dataset contains movie statistics of 4800 movies.
 """)
 
